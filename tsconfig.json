@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "exclude": ["node_modules"],
+  "references": [
+    {
+      "path": "./apps/01-before"
+    },
+    {
+      "path": "./apps/02-after"
+    }
+  ]
+}
