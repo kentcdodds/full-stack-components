@@ -1,4 +1,4 @@
-import type { LoaderArgs, SerializeFrom } from '@remix-run/node'
+import type { LoaderArgs } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import { useFetcher } from '@remix-run/react'
 import clsx from 'clsx'
@@ -21,7 +21,7 @@ export async function loader({ request }: LoaderArgs) {
 }
 
 export function CustomerCombobox({ error }: { error?: string | null }) {
-	const customerFetcher = useFetcher<SerializeFrom<typeof loader>>()
+	const customerFetcher = useFetcher<typeof loader>()
 	const id = useId()
 	const customers = customerFetcher.data?.customers ?? []
 	type Customer = typeof customers[number]
